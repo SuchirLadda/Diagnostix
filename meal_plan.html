@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    
+
     <head>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/cf7810e762.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="icon" type="image/x-icon" href="/Homepage/logo.png">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <link href='https://fonts.googleapis.com/css?family=Zen Maru Gothic|Abel' rel='stylesheet'>
-
-        <title>Nulife</title>
+        <title>Nulife Meal Plan</title>
     </head>
-    
+
     <body>
-
         <img id="menu" src="/Homepage/menu.svg" alt="Menu"/>
-
-        <div class = "blurcontent">
-            <img id="logo" src="/Homepage/logo.png" alt="Logo">
-            <img id="name" src="/Homepage/name.png" alt="Nulife">
-            
-            <div class="quotation">
-                <p id="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p>
-                <p id="author">- Example Name</p>
-            </div>
-        </div>
 
         <div>
             <img id="rect" src="/Homepage/rectangle.png">
 
             <div class="navigation">
-                <a href="meal_plan.html" class="navLinks">Meal Plan</a><br>
+                <a href="home.html" class="navLinks">Home</a><br>
                 <hr class="menu_hr" id="hr1">
                 <a href="#" class="navLinks">To Do</a><br>
                 <hr class="menu_hr" id="hr2">
@@ -45,9 +33,19 @@
             </div>
         </div>
 
+        <div class="blurcontent">
+            <img id="background" src="/Food Pics/bg.png" alt="Background">
+            <h1 id="title">Rory's Meal Plan</h1>
+            <hr class="mp_hr">
+            <div class="mealNums">
+                <p id="meal1">Meal 1</p>
+                <p id="meal2">Meal 2</p>
+                <p id="meal3">Meal 3</p>
+            </div>
+        </div>
+
         <script>
             menuAnimation("menu", "rect", "blurcontent", "navLinks", "menu_hr");
         </script>
     </body>
-
 </html>

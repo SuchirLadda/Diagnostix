@@ -1,53 +1,20 @@
-// Waits for all content to be loaded before loading JS
-document.addEventListener("DOMContentLoaded", function() {
-
+function menuAnimation(menuID, rectID, blurContentId, linksClass, linesClass) {
   // Calls on each feature based on id
-  const menu = document.getElementById("menu");
-  const rect = document.getElementById("rect");
-  const blurcontent = document.getElementById("blurcontent");
-  const links = document.getElementsByClassName("navLinks");
-  const lines = document.getElementsByTagName("hr");
-  const quote = document.getElementById("quote");
-  const author = document.getElementById("author");
-
-  var quotes = [[
-    "Time and health are two precious assets that we don\'t recognize and appreciate until they have been depleted.",
-    "Let food be thy medicine and medicine be thy food.",
-    "Physical fitness is the first requisite of happiness.",
-    "The first wealth is health.",
-    "He who has health has hope; and he who has hope, has everything.",
-    "Health is a state of complete harmony of the body, mind, and spirit.",
-    "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-    "Early to bed and early to rise makes a man healthy, wealthy, and wise.",
-    "The human body is the best picture of the human soul.",
-    "Those who do not find time for exercise will have to find time for illness.",
-    "Keep your vitality. A life without health is like a river without water."
-  ],
-  [
-    "Denis Waitley",
-    "Hippocrates",
-    "Joseph Pilates",
-    "Ralph Waldo Emerson",
-    "Thomas Carlyle",
-    "B.K.S. Iyengar",
-    "Will Durant",
-    "Benjamin Franklin",
-    "Tony Robbins",
-    "Edward Smith Stanley",
-    "Maxime Lagacé"
-  ]];
-
-  let ran = Math.floor(Math.random() * quotes[0].length);
-
-  quote.textContent = '"' + quotes[0][ran] + '"';
-  author.textContent = '- ' + quotes[1][ran];
+  const menu = document.getElementById(menuID);
+  const rect = document.getElementById(rectID);
+  const blurcontent = document.getElementsByClassName(blurContentId);
+  const links = document.getElementsByClassName(linksClass);
+  const lines = document.getElementsByClassName(linesClass);
 
   // Initializes menu rotation to 0
   let menuRotation = 0;
 
   // Function to open the menu
   function open() {
-    blurcontent.style.filter = "blur(4px)";
+    for (let i = 0; i < blurcontent.length; i++) {
+      blur = blurcontent[i];
+      blur.style.filter = "blur(4px)";
+    }
     menu.style.right = "485px";
     rect.style.width = "450px";
     setTimeout(() => {
@@ -82,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 100);
     }
     menu.style.transitionDuration = "0.75s";
-    blurcontent.style.filter = "blur(0px)";
+    for (let i = 0; i < blurcontent.length; i++) {
+      blur = blurcontent[i];
+      blur.style.filter = "blur(0px)";
+    }
     rect.style.width = "0px";
     menu.style.right = "20px";
     menuRotation += 90;
@@ -124,4 +94,47 @@ document.addEventListener("DOMContentLoaded", function() {
       ready = true;
     }, 1000);
   }); // End of click event
+}
+
+// Waits for all content to be loaded before loading JS
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Calls on the quote and author IDs
+  const quote = document.getElementById("quote");
+  const author = document.getElementById("author");
+
+  // Array of quotes and their authors
+  var quotes = [[
+    "Time and health are two precious assets that we don\'t recognize and appreciate until they have been depleted.",
+    "Let food be thy medicine and medicine be thy food.",
+    "Physical fitness is the first requisite of happiness.",
+    "The first wealth is health.",
+    "He who has health has hope; and he who has hope, has everything.",
+    "Health is a state of complete harmony of the body, mind, and spirit.",
+    "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "Early to bed and early to rise makes a man healthy, wealthy, and wise.",
+    "The human body is the best picture of the human soul.",
+    "Those who do not find time for exercise will have to find time for illness.",
+    "Keep your vitality. A life without health is like a river without water."
+  ],
+  [
+    "Denis Waitley",
+    "Hippocrates",
+    "Joseph Pilates",
+    "Ralph Waldo Emerson",
+    "Thomas Carlyle",
+    "B.K.S. Iyengar",
+    "Will Durant",
+    "Benjamin Franklin",
+    "Tony Robbins",
+    "Edward Smith Stanley",
+    "Maxime Lagacé"
+  ]];
+
+  // Gets a random number within the list length
+  let ran = Math.floor(Math.random() * quotes[0].length);
+
+  // Randomizes the quote and author
+  quote.textContent = '"' + quotes[0][ran] + '"';
+  author.textContent = '- ' + quotes[1][ran];
 }); // End of load event
