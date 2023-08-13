@@ -1,5 +1,8 @@
 body {
   background: #CEDFAB;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 #blurcontent {
@@ -71,10 +74,6 @@ body {
   font-style: normal;
 }
 
-.container {
-  position: relative;
-}
-
 #rect {
   position: absolute;
   z-index: 1;
@@ -86,29 +85,97 @@ body {
 }
 
 .navigation {
-  position: relative;
-  z-index: 2;
-  top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
   text-align: center;
   font-size: 35px;
   font-family: 'Abel';
 }
 
-a {
+.navLinks {
+  z-index: 2;
   width: 200px;
   height: 20px;
-  position: relative;
-  z-index: 2;
-  padding-bottom: 40px;
-  display: block;
-  margin-left: 1562.5px;
+  margin-top: 40px !important;
+  margin-right: 7.161458333%;
   text-decoration: none;
   color: white;
-  background-color: transparent;
   opacity: 0;
+  transform: scale(1);
   transition: all 0.5s ease;
 }
 
-a:hover {
-  scale: 1.2;
+.navLinks:hover {
+  transform: scale(1.2);
+}
+
+hr {
+  z-index: 2;
+  margin-top: 50px;
+  border-top: 2px solid #ffffff6b;
+  border-bottom: 0px;
+  border-right: 0px;
+  transform: scale(0);
+  transition: all 0.25s ease;
+}
+
+#hr1 {
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr2 {
+  position: absolute;
+  top: 162.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr3 {
+  position: absolute;
+  top: 262.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr4 {
+  position: absolute;
+  top: 362.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr5 {
+  position: absolute;
+  top: 462.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+@media (max-width: 1919px) {
+  .navLinks {
+    margin-right: 7.761458333%;
+  }
+}
+
+@media (max-width: 1123px) {
+  .navLinks {
+    margin-right: 12.761458333%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navLinks {
+    margin-right: 17.761458333%;
+  }
+}
+
+@media (max-width: 759px) {
+  .navLinks {
+    margin-right: 27.761458333%;
+  }
 }

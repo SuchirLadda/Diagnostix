@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const menu = document.getElementById("menu");
   const rect = document.getElementById("rect");
   const blurcontent = document.getElementById("blurcontent");
-  const links = document.getElementsByTagName("a");
+  const links = document.getElementsByClassName("navLinks");
+  const lines = document.getElementsByTagName("hr");
   const quote = document.getElementById("quote");
   const author = document.getElementById("author");
 
@@ -50,15 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
     menu.style.right = "485px";
     rect.style.width = "450px";
     setTimeout(() => {
-      rect.style.height = "720px";
+      rect.style.height = "620px";
     }, 500);
     menuRotation -= 90;
     menu.style.transform = `rotate(${menuRotation}deg)`;
 
     for (let i = 0; i < links.length; i++) {
       const link = links[i];
+      const line = lines[i];
 
       setTimeout(() => {
+        line.style.transform = "scale(1)";
         link.style.opacity = "1";
       }, 1000);
     }
@@ -70,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Resets everything to default settings
     for (let i = 0; i < links.length; i++) {
       const link = links[i];
+      const line = lines[i];
       link.style.transitionDuration = "0.1s";
+      line.style.transform = "scale(0)";
 
       setTimeout(() => {
         link.style.opacity = "0";
