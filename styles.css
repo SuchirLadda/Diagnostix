@@ -1,60 +1,118 @@
 body {
-    background: #CEDFAB;
+  background: #CEDFAB;
+}
+
+#blurcontent {
+  filter: blur(0px);
+  transition: all 0.5s ease;
 }
 
 #menu {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    right: 20px;
-    top: 15px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transition: all 0.5s ease;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
 }
 
 #menu:hover {
-    scale: 1.2;
+  scale: 1.2;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
-  #name {
-    display: block;
-    width: 300px;
-    height: 130.79px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 250px;
-  }
+i {
+  position: absolute;
+  z-index: 2;
+  color: #465f2e;
+  right: 0;
+  left: 0;
+  font-size: 70px;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+  margin-top: 250px;
+  visibility: hidden;
+  transition: right 0.5s ease;
+}
 
-  #logo {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
-  }
+#name {
+  position: absolute;
+  width: 300px;
+  height: 130.79px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 250px;
+}
 
-  #quote {
-    color: #0A1E03;
-    text-align: center;
-    font-family: 'Zen Maru Gothic';
-    font-size: 25px;
-    font-style: normal;
-    line-height: normal;
-    padding: 0px;
-  }
+#logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+}
 
-  #author {
-    color: #0A1E03;
-    text-align: center;
-    font-family: 'Zen Maru Gothic';
-    font-size: 15px;
-    font-style: normal;
-  }
+.quotation {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#quote {
+  color: #0A1E03;
+  font-family: 'Zen Maru Gothic';
+  font-size: 25px;
+  font-style: normal;
+  line-height: normal;
+}
+
+#author {
+  color: #0A1E03;
+  text-align: right;
+  font-family: 'Zen Maru Gothic';
+  font-size: 15px;
+  font-style: normal;
+}
+
+#rect {
+  position: absolute;
+  top: 15px;
+  height: 40px;
+  width: 0px;
+  right: 20px;
+  transition: all 0.5s ease;
+}
+
+.navigation {
+  position: absolute;
+  text-align: center;
+  right: 90px;
+  font-size: 35px;
+  font-family: 'Bakbak One';
+  top: 40px;
+}
+
+a {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 7.5px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #232629;
+  background-color: white;
+}
