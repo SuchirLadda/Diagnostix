@@ -1,0 +1,245 @@
+body {
+  background: #CEDFAB;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.blurcontent {
+  filter: blur(0px);
+  transition: all 0.5s ease;
+}
+
+#menu {
+  position: absolute;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+#menu:hover {
+  scale: 1.2;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#name {
+  position: absolute;
+  width: 300px;
+  height: 130.79px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 250px;
+}
+
+#logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+}
+
+.quotation {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#quote {
+  color: #0A1E03;
+  font-family: 'Zen Maru Gothic';
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  line-height: normal;
+}
+
+#author {
+  color: #0A1E03;
+  text-align: right;
+  font-family: 'Zen Maru Gothic';
+  font-size: 15px;
+  font-style: normal;
+}
+
+#rect {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  height: 40px;
+  width: 0px;
+  right: 20px;
+  transition: all 0.5s ease;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Abel';
+}
+
+.navLinks {
+  z-index: 2;
+  width: 200px;
+  height: 20px;
+  margin-top: 40px !important;
+  margin-right: 7.161458333%;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.navLinks:hover {
+  transform: scale(1.2);
+}
+
+.menu_hr {
+  z-index: 2;
+  margin-top: 50px;
+  border-top: 2px solid #ffffff6b;
+  border-bottom: 0px;
+  border-right: 0px;
+  transform: scale(0);
+  transition: all 0.25s ease;
+}
+
+#hr1 {
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr2 {
+  position: absolute;
+  top: 162.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr3 {
+  position: absolute;
+  top: 262.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr4 {
+  position: absolute;
+  top: 362.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr5 {
+  position: absolute;
+  top: 462.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+@media (max-width: 1919px) {
+  .navLinks {
+    margin-right: 7.761458333%;
+  }
+}
+
+@media (max-width: 1124px) {
+  .navLinks {
+    margin-right: 12.761458333%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    margin-right: 17.761458333%;
+  }
+}
+
+@media (max-width: 760px) {
+  .navLinks {
+    margin-right: 27.761458333%;
+  }
+}
+
+/* Meal Plan */
+#background {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 12.5%;
+  width: 75%;
+  height: 75%;
+}
+
+#title {
+  position: absolute;
+  z-index: 2;
+  font-family: 'Zen Maru Gothic';
+  font-weight: normal;
+  font-size: 2vw;
+  left: 15%;
+  top: 10%;
+}
+
+.mp_hr {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 15%;
+  width: 70.3125%;
+}
+
+#meal1 {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 23.5%;
+}
+
+#meal2 {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 48.5%;
+}
+
+#meal3 {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 73.5%;
+}
+
+#mp_menu {
+  position: absolute;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+#mp_menu:hover {
+  scale: 1.2;
+}
