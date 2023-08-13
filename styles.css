@@ -9,6 +9,7 @@ body {
 
 #menu {
   position: absolute;
+  z-index: 3;
   width: 40px;
   height: 40px;
   right: 20px;
@@ -26,19 +27,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-
-i {
-  position: absolute;
-  z-index: 2;
-  color: #465f2e;
-  right: 0;
-  left: 0;
-  font-size: 70px;
-  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
-  margin-top: 250px;
-  visibility: hidden;
-  transition: right 0.5s ease;
 }
 
 #name {
@@ -69,6 +57,7 @@ i {
 #quote {
   color: #0A1E03;
   font-family: 'Zen Maru Gothic';
+  text-align: center;
   font-size: 25px;
   font-style: normal;
   line-height: normal;
@@ -82,9 +71,14 @@ i {
   font-style: normal;
 }
 
+.container {
+  position: relative;
+}
+
 #rect {
   position: absolute;
-  top: 15px;
+  z-index: 1;
+  top: 10px;
   height: 40px;
   width: 0px;
   right: 20px;
@@ -92,27 +86,29 @@ i {
 }
 
 .navigation {
-  position: absolute;
+  position: relative;
+  z-index: 2;
+  top: 55px;
   text-align: center;
-  right: 90px;
   font-size: 35px;
-  font-family: 'Bakbak One';
-  top: 40px;
+  font-family: 'Abel';
 }
 
 a {
+  width: 200px;
+  height: 20px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 40px;
   display: block;
-  margin-bottom: 15px;
+  margin-left: 1562.5px;
   text-decoration: none;
   color: white;
   background-color: transparent;
-  padding: 7.5px;
-  border-radius: 25px;
   opacity: 0;
   transition: all 0.5s ease;
 }
 
 a:hover {
-  color: #232629;
-  background-color: white;
+  scale: 1.2;
 }
