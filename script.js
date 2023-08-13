@@ -15,13 +15,13 @@ function addTask(){
 
 }
 
-listContainer.addEventListener("click", function(e){
-    if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked");
+listContainer.addEventListener("click", function(confirm){
+    if(confirm.target.tagName === "LI"){
+        confirm.target.classList.toggle("checked");
         save();
     }
-    else if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
+    else if(confirm.target.tagName === "SPAN"){
+        confirm.target.parentElement.remove();
         save();
     }
 }, false);
