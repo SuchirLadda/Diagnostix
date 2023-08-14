@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Zen Maru Gothic|Abel' rel='stylesheet'>
+
+        <link rel="icon" type="image/x-icon" href="/images/logo.png">
+        <title>Nulife Checklist</title>
+        
+    </head>
+
+    <body>
+        <img id="menu" src="/images/menu.svg" alt="Menu"/>
+
+        <div>
+            <img id="rect" src="/images/rectangle.png">
+
+            <div class="navigation">
+                <a href="meal_plan.html" class="navLinks">Meal Plan</a><br>
+                <hr class="menu_hr" id="hr1">
+                <a href="home.html" class="navLinks">Home</a><br>
+                <hr class="menu_hr" id="hr2">
+                <hr class="menu_hr" id="hr3">
+                <a href="signin.html" class="navLinks">Login</a><br>
+                <hr class="menu_hr" id="hr4">
+                <a href="#" class="navLinks">Contact</a><br>
+            </div>
+        </div>
+
+        <div class="blurcontent">
+            <div class="containerC">
+                <div class="main-box">
+                    <h2 id="checklistTitle">Checklist</h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add a task">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container"></ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            menuAnimation("menu", "rect", "blurcontent", "navLinks", "menu_hr");
+
+            document.addEventListener("DOMContentLoaded", function() {
+    
+                // Assigns input box and list container
+                inputBox = inpBox("input-box");
+                listContainer = listCon("list-container");
+                
+                // Adds an on click event to list container
+                listContainer.addEventListener("click", function(confirm) {
+
+                    // Checks if user checked the task or removed it
+                    if(confirm.target.tagName === "LI"){
+                        confirm.target.classList.toggle("checked");
+                        save();
+                    }
+                    else if(confirm.target.tagName === "SPAN"){
+                        confirm.target.parentElement.remove();
+                        save();
+                    }
+                }, false);
+                
+                // TBC
+                function show() {
+                    listContainer.innerHTML = localStorage.getItem("data");
+                }
+                show();
+            });
+
+            function addTask() {
+                if (inputBox.value === "") {
+                    
+                } else {
+
+                    // Creates a list element and assigns it the value of whatever the user typed
+                    let li = document.createElement("li");
+                    li.innerHTML = inputBox.value;
+                    listContainer.appendChild(li);
+                
+                    // Creates checkbox
+                    let span = document.createElement("span");
+                    span.innerHTML = "\u00d7";
+                    li.appendChild(span);
+                
+                    // Clear input box and save
+                    inputBox.value = "";
+                    save();
+                }
+            }
+        </script>
+
+    </body>
+</html>
