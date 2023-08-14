@@ -1,13 +1,16 @@
+/* login page*/
 
+#login_body {
+    font-family: 'Zen Maru Gothic';
 }
 
-
-/* login page*/
 .container {
     width: 100%;
     height: 100vh;
     background-color: #CEDFAB;
 }
+
+
 
 .center_box {
     /*come back to this */
@@ -57,6 +60,7 @@
     border: 0;
     outline: 0;
     padding: 12px 15px;
+    border-radius: 50px;
 }
 
 #forPass {
@@ -89,4 +93,20 @@
 
 .btn_field button:hover {
     background-color: aquamarine;
+}
+
+#submit_btn {
+    margin: 0 10px;
+    background: #eaeaea;
+    width: 20%;
+    background: transparent border;
+    border: 0;
+    outline: 0;
+    padding: 12px 15px;
+    border-radius: 50px;
+}
+
+#submit_btn:hover {
+    color: skyblue;
+    cursor: pointer;
 }
