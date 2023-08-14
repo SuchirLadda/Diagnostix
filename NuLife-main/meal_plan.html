@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/cf7810e762.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/images/logo.png">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Zen Maru Gothic|Abel' rel='stylesheet'>
+        <title>Nulife Meal Plan</title>
+    </head>
+
+    <body>
+        <img id="menu" src="/images/menu.svg" alt="Menu"/>
+
+        <div>
+            <img id="rect" src="/images/rectangle.png">
+
+            <div class="navigation">
+                <a href="index.html" class="navLinks">Home</a><br>
+                <hr class="menu_hr" id="hr1">
+                <a href="checklist.html" class="navLinks">To Do</a><br>
+                <hr class="menu_hr" id="hr2">
+                <a href="signin.html" class="navLinks">Login</a><br>
+                <hr class="menu_hr" id="hr4">
+                <a href="contact.html" class="navLinks">Contact</a><br>
+                <hr class="menu_hr" id="hr3">
+            </div>
+        </div>
+
+        
+
+        <div class="blurcontent">
+
+            <img id="mp_bg" src="/FoodPics/bg.png" alt="Background">
+            
+            <h1 id="title">Your Meal Plan</h1>
+            <hr class="mp_hr">
+            <div class="mealNums">
+                <p id="meal1">Meal 1</p>
+                <p id="meal2">Meal 2</p>
+                <p id="meal3">Meal 3</p>
+            </div>
+            
+
+            <img id="mealimg1" src="/images/leaves.jpg" alt="Meal 1 Image">
+            <img id="mealimg2" src="/images/leaves.jpg" alt="Meal 2 Image">
+            <img id="mealimg3" src="/images/leaves.jpg" alt="Meal 3 Image">
+
+            <div class="prices-dropdown">
+                <span id="prices-dropdown-button">Prices</span>
+                <div class="prices-dropdown-content">
+                  <p id="prices-dropdown-0">$0 - $50</p>
+                  <p id="prices-dropdown-50">$50 - $100</p>
+                  <p id="prices-dropdown-100">$100 - $150</p>
+                  <p id="prices-dropdown-150">$150 - $200</p>
+                </div>
+            </div>
+
+            <div class="diet-dropdown">
+                <span id="diet-dropdown-title">Diet</span>
+                <div class="diet-dropdown-content">
+                  <p id="diet-dropdown-lowcarb">Low Carb</p>
+                  <p id="diet-dropdown-highprotein">High Protein</p>
+                  <p id="diet-dropdown-vegan">Vegan</p>
+                </div>
+            </div>
+
+            <div class="mealNames">
+                <p id="mealName1">Meal 1</p>
+                <p id="mealName2">Meal 2</p>
+                <p id="mealName3">Meal 3</p>
+            </div>
+
+            <div class="ingredients">
+                <a href="" id="ing1">Ingredients</a>
+                <a href="" id="ing2">Ingredients</a>
+                <a href="" id="ing3">Ingredients</a>
+            </div>
+        </div>
+
+        
+
+        <script>
+            menuAnimation("menu", "rect", "blurcontent", "navLinks", "menu_hr"); 
+
+            const meal1 = document.getElementById("mealimg1");
+            const meal2 = document.getElementById("mealimg2");
+            const meal3 = document.getElementById("mealimg3");
+
+            const mealName1 = document.getElementById("mealName1");
+            const mealName2 = document.getElementById("mealName2");
+            const mealName3 = document.getElementById("mealName3");
+
+            const ing1 = document.getElementById("ing1");
+            const ing2 = document.getElementById("ing2");
+            const ing3 = document.getElementById("ing3");
+
+            const dietDropdownBtn = document.getElementById("diet-dropdown-title");
+            const dietDropdownLowCarb = document.getElementById("diet-dropdown-lowcarb");
+            const dietDropdownHighProtein = document.getElementById("diet-dropdown-highprotein");
+            const dietDropdownVegan = document.getElementById("diet-dropdown-vegan");
+
+            const pricesDropdownBtn = document.getElementById("prices-dropdown-button");
+            const pricesDropdown0 = document.getElementById("prices-dropdown-0");
+            const pricesDropdown50 = document.getElementById("prices-dropdown-50");
+            const pricesDropdown100 = document.getElementById("prices-dropdown-100");
+            const pricesDropdown150 = document.getElementById("prices-dropdown-150");
+
+            let dietIndex = 0;
+            let priceIndex = 0;
+
+            function updateImages() {
+                meal1.src = directories[priceIndex][dietIndex][0];
+                meal2.src = directories[priceIndex][dietIndex][1];
+                meal3.src = directories[priceIndex][dietIndex][2];
+                mealName1.textContent = directories[priceIndex][dietIndex][3];
+                mealName2.textContent = directories[priceIndex][dietIndex][4];
+                mealName3.textContent = directories[priceIndex][dietIndex][5];
+                ing1.href = directories[priceIndex][dietIndex][6];
+                ing2.href = directories[priceIndex][dietIndex][7];
+                ing3.href = directories[priceIndex][dietIndex][8];
+            }
+
+            dietDropdownLowCarb.addEventListener("click", function() {
+                if (dietDropdownBtn.textContent == "Diet") {
+                    pricesDropdownBtn.textContent = pricesDropdown0.textContent;
+                    priceIndex = 0;
+                }
+
+                dietDropdownBtn.textContent = dietDropdownLowCarb.textContent;
+                dietIndex = 1;
+                updateImages();
+            });
+
+            dietDropdownHighProtein.addEventListener("click", function() {
+                if (dietDropdownBtn.textContent == "Diet") {
+                    pricesDropdownBtn.textContent = pricesDropdown0.textContent;
+                    priceIndex = 0;
+                }
+
+                dietDropdownBtn.textContent = dietDropdownHighProtein.textContent;
+                dietIndex = 0;
+                updateImages();
+            });
+
+            dietDropdownVegan.addEventListener("click", function() {
+                if (dietDropdownBtn.textContent == "Diet") {
+                    pricesDropdownBtn.textContent = pricesDropdown0.textContent;
+                    priceIndex = 0;
+                }
+
+                dietDropdownBtn.textContent = dietDropdownVegan.textContent;
+                dietIndex = 2;
+                updateImages();
+            });
+
+            pricesDropdown0.addEventListener("click", function() {
+                pricesDropdownBtn.textContent = pricesDropdown0.textContent;
+                priceIndex = 0;
+                updateImages();
+            });
+
+            pricesDropdown50.addEventListener("click", function() {
+                pricesDropdownBtn.textContent = pricesDropdown50.textContent;
+                priceIndex = 1;
+                updateImages();
+            });
+
+            pricesDropdown100.addEventListener("click", function() {
+                pricesDropdownBtn.textContent = pricesDropdown100.textContent;
+                priceIndex = 2;
+                updateImages();
+            });
+
+            pricesDropdown150.addEventListener("click", function() {
+                pricesDropdownBtn.textContent = pricesDropdown150.textContent;
+                priceIndex = 3;
+                updateImages();
+            });
+
+            const directories = [
+                            [
+                                [
+                                    "/FoodPics/LessThan50/HighProtein/ChickpeaSalad/ChickpeaSaladPic.jpg",
+                                    "/FoodPics/LessThan50/HighProtein/QuinoaBowl/quinoa-bowl_01-06-13_1_ca.jpg",
+                                    "/FoodPics/LessThan50/HighProtein/ScrambledEggs/ScrambledEggsPic.jpg",
+                                    "Chickpea Salad",
+                                    "Quinow Bowl",
+                                    "Scrambled Eggs",
+                                    "/FoodPics/LessThan50/HighProtein/ChickpeaSalad/stats.txt",
+                                    "/FoodPics/LessThan50/HighProtein/QuinoaBowl/stats.txt",
+                                    "/FoodPics/LessThan50/HighProtein/ScrambledEggs/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/LessThan50/LowCarb/BakedSalmon/bakedSalmon.jpg",
+                                    "/FoodPics/LessThan50/LowCarb/TunaWraps/Tuna-Avocado-Lettuce-Wraps.jpg",
+                                    "/FoodPics/LessThan50/LowCarb/ZucchiniNoodles/ZuccNoodles.jpg",
+                                    "Baked Samlon",
+                                    "Tuna Wraps",
+                                    "Zucchini Noodles",
+                                    "/FoodPics/LessThan50/LowCarb/BakedSalmon/stats.txt",
+                                    "/FoodPics/LessThan50/LowCarb/TunaWraps/stats.txt",
+                                    "/FoodPics/LessThan50/LowCarb/ZucchiniNoodles/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/LessThan50/Vegan/BeanBurritoBowl/burritoBowl.jpg",
+                                    "/FoodPics/LessThan50/Vegan/TofuScramble/TofuScramble.jpg",
+                                    "/FoodPics/LessThan50/Vegan/VegStiryFry/VegStirFry.jpg",
+                                    "Burrito Bowl",
+                                    "Tofu Scramble",
+                                    "Vegetable Stir Fry",
+                                    "/FoodPics/LessThan50/Vegan/BeanBurritoBowl/stats.txt",
+                                    "/FoodPics/LessThan50/Vegan/TofuScramble/stats.txt",
+                                    "/FoodPics/LessThan50/Vegan/VegStiryFry/stats.txt"
+                                ],
+                            ],
+                            [
+                                [
+                                    "/FoodPics/50-100/HighProtein/CheeseAndBerryBowl/Cottage-Cheese-Breakfast-Bowl.jpg",
+                                    "/FoodPics/50-100/HighProtein/ChiaPudding/Warm-Chia-Hemp-Seed-Pudding-700x1050.jpg",
+                                    "/FoodPics/50-100/HighProtein/EdamameSalad/saladPic.jpg",
+                                    "Cheese & Berry Bowl",
+                                    "Chia Pudding",
+                                    "Edamame Salad",
+                                    "/FoodPics/50-100/HighProtein/CheeseAndBerryBowl/stats.txt",
+                                    "/FoodPics/50-100/HighProtein/ChiaPudding/stats.txt",
+                                    "/FoodPics/50-100/HighProtein/EdamameSalad/stats.txt"
+                                ], 
+                                [
+                                    "/FoodPics/50-100/LowCarb/EggplantTofuCurry/vegan-curry.jpg",
+                                    "/FoodPics/50-100/LowCarb/ShrimpBrocStirFry/Shrimp-and-broccoli-skillet-8.jpg",
+                                    "/FoodPics/50-100/LowCarb/SpinachMushroomOmelette/Cheesy-Mushroom-Spinach-Omelet-feat.jpg",
+                                    "Eggplant Curry",
+                                    "Shrimp Stir Fry",
+                                    "Spinach & Mushroom Omelette",
+                                    "/FoodPics/50-100/LowCarb/EggplantTofuCurry/stats.txt",
+                                    "/FoodPics/50-100/LowCarb/ShrimpBrocStirFry/stats.txt",
+                                    "/FoodPics/50-100/LowCarb/SpinachMushroomOmelette/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/50-100/Vegan/CauliflowerRiceLentilBowl/Grain-Free-Take-on-Mujadara-CURRIED-Cauliflower-Rice-Lentils-and-Shallot-10-ingredients-BIG-flavor-glutenfree-plantbased-mujadara-grainfree-cauliflowerrice-minimalist.jpg",
+                                    "/FoodPics/50-100/Vegan/ProteinSmoothie/vegan-strawberry-banana-spinach-smoothie-10-Edit.jpg",
+                                    "/FoodPics/50-100/Vegan/VeganCurry/15-Minute-Lentil-Veggie-Curry-1.jpg",
+                                    "Cauliflower Rice Lentil Bowl",
+                                    "Strawberry Banana Smoothie",
+                                    "Lentil Curry",
+                                    "/FoodPics/50-100/Vegan/CauliflowerRiceLentilBowl/stats.txt",
+                                    "/FoodPics/50-100/Vegan/ProteinSmoothie/stats.txt",
+                                    "/FoodPics/50-100/Vegan/VeganCurry/stats.txt"
+                                ]
+                            ], 
+                            [
+                                [
+                                    "/FoodPics/100-150/HighProtein/ChickenPotPie/easy-chicken-pot-pie-recipe-1.jpg",
+                                    "/FoodPics/100-150/HighProtein/ProteinPancakes/Protein-pancakes-b64bd40.jpg",
+                                    "/FoodPics/100-150/HighProtein/TofuStirFry/Spicy-Tofu-Stirfry-LEAD-3-3da17681605c41688be8742e045f71f5.jpg",
+                                    "Chicken Pot Pie",
+                                    "Protein Pancakes",
+                                    "Tofu Stir Fry",
+                                    "/FoodPics/100-150/HighProtein/ChickenPotPie/stats.txt",
+                                    "/FoodPics/100-150/HighProtein/ProteinPancakes/stats.txt",
+                                    "/FoodPics/100-150/HighProtein/TofuStirFry/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/100-150/LowCarb/CabbageTacos/6087342-bd8d76c5338045b8b134b3da0cca9eb0.jpg",
+                                    "/FoodPics/100-150/LowCarb/CauliflowerFriedRice/cauliflower-shrimp-fried-rice.jpg",
+                                    "/FoodPics/100-150/LowCarb/EggSpinachScramble/spinach-and-eggs-featured-2022.jpg",
+                                    "Cabbage Tacos",
+                                    "Cauliflower Fried Rice",
+                                    "Egg-Spinach Scramble",
+                                    "/FoodPics/100-150/LowCarb/CabbageTacos/stats.txt",
+                                    "/FoodPics/100-150/LowCarb/CauliflowerFriedRice/stats.txt",
+                                    "/FoodPics/100-150/LowCarb/EggSpinachScramble/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/100-150/Vegan/GrilledMushroomsQuinoa/Vegetable-Stuffed-Mushrooms-SQUARE.jpg",
+                                    "/FoodPics/100-150/Vegan/TofuVegetableCurry/one-pan-tofu-coconut-curry4-scaled-720x720.jpg",
+                                    "/FoodPics/100-150/Vegan/VeganGreekSalad/Vegan-Greek-Salad-720x720.jpg",
+                                    "Grilled Mushrooms",
+                                    "Tofu Coconut Curry",
+                                    "Greek Salad",
+                                    "/FoodPics/100-150/Vegan/GrilledMushroomsQuinoa/stats.txt",
+                                    "/FoodPics/100-150/Vegan/TofuVegetableCurry/stats.txt",
+                                    "/FoodPics/100-150/Vegan/VeganGreekSalad/stats.txt"
+                                ]
+                            ], 
+                            [
+                                [
+                                    "/FoodPics/150+/HighProtein/QuinoaChickpeaBowl/Chickpea-Quinoa-Buddha-Bowl-SQUARE.jpg",
+                                    "/FoodPics/150+/HighProtein/SteakSalad/IMG_2094.jpg",
+                                    "/FoodPics/150+/HighProtein/TurkeyAvocadoWrap/Turkey-Guacamole-Wraps_EXPS_SDAM18_27746_B12_07_1b.jpg",
+                                    "Quinoa Chickpea Bowl",
+                                    "Steak Salad",
+                                    "Turkey Avocado Wrap",
+                                    "/FoodPics/150+/HighProtein/QuinoaChickpeaBowl/stats.txt",
+                                    "/FoodPics/150+/HighProtein/SteakSalad/stats.txt",
+                                    "/FoodPics/150+/HighProtein/TurkeyAvocadoWrap/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/150+/LowCarb/AvocadoTunaBoats/whole30-avocado-tuna-boats-9-1.jpg",
+                                    "/FoodPics/150+/LowCarb/BroccoliCheddarStuffedChickenBreast/chicken-sq.jpg",
+                                    "/FoodPics/150+/LowCarb/StuffedPepperTurkey/79805-StuffedPeppersWithturkeyAndVegtables-MFS-2x3-0048.jpg",
+                                    "Avocado Tuna Boats",
+                                    "Stuffed Chicken Breast",
+                                    "Stuffed Turkey",
+                                    "/FoodPics/150+/LowCarb/AvocadoTunaBoats/stats.txt",
+                                    "/FoodPics/150+/LowCarb/BroccoliCheddarStuffedChickenBreast/stats.txt",
+                                    "/FoodPics/150+/LowCarb/StuffedPepperTurkey/stats.txt"
+                                ],
+                                [
+                                    "/FoodPics/150+/Vegan/VeganMediterraneanPlate/DELALLO-EASTER-MEZZE-PLATTER-3-copy.jpg",
+                                    "/FoodPics/150+/Vegan/VeganNoriWraps/616f7c9ce5e41786a06054a5_NoriRoll6.jpg",
+                                    "/FoodPics/150+/Vegan/VeganRatatouille/Tian-Ratatouille-by-Nutriciously-4.jpg",
+                                    "Mediterranean Plate",
+                                    "Nori Roll",
+                                    "Tian Ratatouille",
+                                    "/FoodPics/150+/Vegan/VeganMediterraneanPlate/stats.txt",
+                                    "/FoodPics/150+/Vegan/VeganNoriWraps/stats.txt",
+                                    "/FoodPics/150+/Vegan/VeganRatatouille/stats.txt"
+                                ]
+                            ]
+            ];
+        </script>
+        
+    </body>
+</html>

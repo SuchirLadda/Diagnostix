@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.CSS">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Zen Maru Gothic|Abel' rel='stylesheet'>
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <title>Nulife Sign Up</title>
+</head>
+
+<body id="login_body">
+
+    <img id="menu" src="/images/menu.svg" alt="Menu"/>
+
+    <div class = "blurcontent">
+        <div class="container">
+            <div class="center_box">
+                <h1 id="log_title">Sign In</h1>
+                <form action="/includes/login.inc.php" method="post">
+                    <div class="in_group">
+                        <div class="in_field" id="email_field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" id="up_email" placeholder="Email" name="email">
+                        </div>
+                        <div class="in_field" id="password_field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="up_password" placeholder="Password" name="password">
+                        </div>
+                        <button type="submit" id="submit_btn">Submit</button><br>
+                        <a href="https://1password.com/business-pricing" id="forPass">Forgot My Password</a>
+                    </div>
+                    <div class="btn_field">
+                        <button type="button" id="signup_btn">Sign Up</button>
+                        <button type="button" id="signin_btn">Sign In</button>
+                    </div>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+    
+
+    <div>
+        <img id="rect" src="/images/rectangle.png">
+
+        <div class="navigation">
+            <a href="meal_plan.html" class="navLinks">Meal Plan</a><br>
+            <hr class="menu_hr" id="hr1">
+            <a href="checklist.html" class="navLinks">To Do</a><br>
+            <hr class="menu_hr" id="hr2">
+            <a href="index.html" class="navLinks">Home</a><br>
+            <hr class="menu_hr" id="hr4">
+            <a href="contact.html" class="navLinks">Contact</a><br>
+            <hr class="menu_hr" id="hr3">
+        </div>
+    </div>
+
+    <script>
+        menuAnimation("menu", "rect", "blurcontent", "navLinks", "menu_hr");
+
+        document.getElementById("signup_btn").onclick = function () {
+            location.href = "signup.html";
+        };
+    </script>
+
+</body>
+
+
+</html>

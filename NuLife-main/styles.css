@@ -1,0 +1,817 @@
+
+body {
+  background: #CEDFAB;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* Home */
+.blurcontent {
+  filter: blur(0px);
+  transition: all 0.5s ease;
+}
+
+#menu {
+  position: absolute;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+#menu:hover {
+  scale: 1.2;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#name {
+  position: absolute;
+  width: 300px;
+  height: 130.79px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 250px;
+}
+
+#logo {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+}
+
+.quotation {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#quote {
+  color: #0A1E03;
+  font-family: 'Zen Maru Gothic';
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  line-height: normal;
+}
+
+#author {
+  color: #0A1E03;
+  text-align: right;
+  font-family: 'Zen Maru Gothic';
+  font-size: 15px;
+  font-style: normal;
+}
+
+#rect {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  height: 40px;
+  width: 0px;
+  right: 20px;
+  transition: all 0.5s ease;
+}
+
+.navigation {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Abel';
+}
+
+.navLinks {
+  z-index: 2;
+  width: 200px;
+  height: 20px;
+  margin-top: 40px !important;
+  margin-right: 7.161458333%;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.navLinks:hover {
+  transform: scale(1.2);
+}
+
+.menu_hr {
+  z-index: 2;
+  margin-top: 80px;
+  border-top: 1px solid #ffffff;
+  transform: scale(0);
+  transition: all 0.25s ease;
+}
+
+#hr1 {
+  position: absolute;
+  top: 62.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr2 {
+  position: absolute;
+  top: 162.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr3 {
+  position: absolute;
+  top: 262.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+#hr4 {
+  position: absolute;
+  top: 362.5px;
+  width: 200px;
+  right: 137.5px;
+}
+
+@media (max-width: 1919px) {
+  .navLinks {
+    margin-right: 7.761458333%;
+  }
+}
+
+@media (max-width: 1124px) {
+  .navLinks {
+    margin-right: 12.761458333%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    margin-right: 17.761458333%;
+  }
+}
+
+@media (max-width: 760px) {
+  .navLinks {
+    margin-right: 27.761458333%;
+  }
+}
+
+/* Meal Plan */
+#mp_bg {
+  position: absolute;
+  z-index: 1;
+  bottom: -375px;
+  left: 12.5%;
+  width: 75%;
+}
+
+#title {
+  position: absolute;
+  z-index: 2;
+  font-family: 'Zen Maru Gothic';
+  font-weight: normal;
+  font-size: 2vw;
+  left: 15%;
+  bottom: 225px;
+}
+
+.mp_hr {
+  position: absolute;
+  z-index: 2;
+  bottom: 225px;
+  left: 14.75%;
+  width: 70.3125%;
+}
+
+#meal1 {
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  bottom: 150px;
+  left: 23.5%;
+}
+
+#meal2 {
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  bottom: 150px;
+  left: 48.5%;
+}
+
+#meal3 {
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  bottom: 150px;
+  left: 73.5%;
+}
+
+#mp_menu {
+  position: absolute;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+#mp_menu:hover {
+  scale: 1.2;
+}
+
+.prices-dropdown {
+  position: absolute;
+  z-index: 3;
+  left: 75%;
+  bottom: 255px;
+  background-color: #a7b167;
+  padding: 2.5px 20px 7.5px 20px;
+  border-radius: 15px;
+  font-family: 'Zen Maru Gothic';
+  color: white;
+  font-size: 25px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+.prices-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px;
+  z-index: 1;
+  text-align: center;
+}
+
+.prices-dropdown:hover {
+  transform: scale(1.05);
+}
+
+.prices-dropdown:hover .prices-dropdown-content {
+  display: block;
+}
+
+#prices-dropdown-0 {
+  padding: 5px;
+}
+
+#prices-dropdown-0:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#prices-dropdown-50 {
+  padding: 5px;
+}
+
+#prices-dropdown-50:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#prices-dropdown-100 {
+  padding: 5px;
+}
+
+#prices-dropdown-100:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#prices-dropdown-150 {
+  padding: 5px;
+}
+
+#prices-dropdown-150:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+.diet-dropdown {
+  position: absolute;
+  z-index: 3;
+  left: 65%;
+  bottom: 255px;
+  background-color: #a7b167;
+  padding: 2.5px 20px 7.5px 20px;
+  border-radius: 15px;
+  font-family: 'Zen Maru Gothic';
+  color: white;
+  font-size: 25px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+}
+
+.diet-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px;
+  z-index: 4;
+  text-align: center;
+}
+
+.diet-dropdown:hover {
+  transform: scale(1.05);
+}
+
+.diet-dropdown:hover .diet-dropdown-content {
+  display: block;
+  z-index: 3;
+}
+
+#diet-dropdown-lowcarb {
+  padding: 5px;
+  z-index: 3;
+}
+
+#diet-dropdown-lowcarb:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#diet-dropdown-highprotein {
+  padding: 5px;
+  z-index: 3;
+}
+
+#diet-dropdown-highprotein:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#diet-dropdown-vegan {
+  padding: 5px;
+  z-index: 3;
+}
+
+#diet-dropdown-vegan:hover {
+  background-color: #a7b167;
+  border-radius: 10px;
+}
+
+#mealimg1 {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 100%;
+  bottom: -50px;
+  left: 390px;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+#mealimg2 {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 100%;
+  bottom: -50px;
+  left: 875px;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+  z-index: 3;
+}
+
+#mealimg3 {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 100%;
+  bottom: -50px;
+  left: 1350px;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+  z-index: 3;
+}
+
+#mealName1 {
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  left: 480px;
+  transform: translate(-50%, -50%);
+  bottom: -150px;
+}
+
+#mealName2 {
+  position: absolute;
+  z-index: 3;
+  left: 965px;
+  transform: translate(-50%, -50%);
+  bottom: -150px;
+}
+
+#mealName3 {
+  position: absolute;
+  z-index: 3;
+  left: 1440px;
+  transform: translate(-50%, -50%);
+  bottom: -150px;
+}
+
+#ing1 {
+  position: absolute;
+  text-decoration: none;
+  z-index: 3;
+  left: 480px;
+  transform: translate(-50%, -50%);
+  bottom: -250px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 2.5px 20px 7.5px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+#ing1:hover {
+  font-size: 22px;
+}
+
+#ing2 {
+  position: absolute;
+  text-decoration: none;
+  z-index: 3;
+  left: 965px;
+  transform: translate(-50%, -50%);
+  bottom: -250px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 2.5px 20px 7.5px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+#ing2:hover {
+  font-size: 22px;
+}
+
+#ing3 {
+  position: absolute;
+  text-decoration: none;
+  z-index: 3;
+  left: 1440px;
+  transform: translate(-50%, -50%);
+  bottom: -250px;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 2.5px 20px 7.5px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+#ing3:hover {
+  font-size: 22px;
+}
+
+/* login page*/
+.containerL {
+  width: 100%;
+  height: 100vh;
+  background-color: #CEDFAB;
+  overflow-x: hidden;
+}
+
+.center_box {
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.center_box h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.in_field {
+  max-height: 65px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 3px;
+}
+
+.in_field input {
+  margin: 0 10px;
+  background: #eaeaea;
+  width: 100%;
+  background: transparent border;
+  border: 0;
+  outline: 0;
+  padding: 12px 15px;
+  border-radius: 50px;
+}
+
+#forPass {
+  text-decoration: underline;
+  color: purple;
+  text-align: left;
+  font-size: 15px;
+}
+
+.btn_field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_field button {
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-basis: 50%;
+  background-color: #eaeaea;
+  color: black;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.btn_field button:hover {
+  background-color: skyblue;
+}
+
+#submit_btn {
+  margin: 15px 10px;
+  background: #eaeaea;
+  width: 20%;
+  background: transparent border;
+  border: 0;
+  outline: 0;
+  padding: 12px 15px;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+  color: black;
+}
+
+#submit_btn:hover {
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+/* Checklist */
+.containerC {
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic';
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 140vh;
+  background: #CEDFAB;
+  padding: 40px;
+}
+
+#checklistTitle {
+  font-family: "Zen Maru Gothic";
+  font-weight: lighter;
+}
+
+.main-box {
+  position: absolute;
+  top: -350px;
+  left: 35%;
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 20px 15px 20px;
+  border-radius: 10px;
+}
+
+.main-box h2 {
+  color: black;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  background: #F1F1E9;
+  border-radius: 30px;
+}
+
+input {
+  flex:1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 200px;
+}
+
+button {
+  border: none;
+  padding: 10px 50px;
+  background: #A7B167;
+  color: white;
+  font-size:20px;
+  cursor:pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(/images/png-transparent-check-mark-computer-icons-green-tick-mark-angle-text-logo-removebg-preview.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: rgb(207, 243, 166);
+  border-radius: 20px;
+}
+
+/* Contact */
+.names {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#name1 {
+  position: absolute;
+  left: 19.25%;
+  top: 0%;
+}
+
+#name2 {
+  position: absolute;
+  left: 44.5%;
+  top: 0%;
+}
+
+#name3 {
+  position: absolute;
+  left: 69.75%;
+  top: 0%;
+}
+
+#dev1 {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 16%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#dev1:hover {
+  transform: scale(1.1);
+}
+
+#dev2 {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 40.5%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#dev2:hover {
+  transform: scale(1.1);
+}
+
+#dev3 {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 67%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#dev3:hover {
+  transform: scale(1.1);
+}
+
+#git1 {
+  width: 200px;
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#git1:hover {
+  transform: scale(1.1);
+}
+
+#git2 {
+  width: 200px;
+  position: absolute;
+  top: 20%;
+  left: 40.5%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#git2:hover {
+  transform: scale(1.1);
+}
+
+#git3 {
+  width: 200px;
+  position: absolute;
+  top: 20%;
+  left: 67%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#git3:hover {
+  transform: scale(1.1);
+}
+
+#repTitle {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  left: 40.75%;
+  top: 40%;
+}
+
+#repository {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#repository:hover {
+  transform: scale(1.1);
+}
